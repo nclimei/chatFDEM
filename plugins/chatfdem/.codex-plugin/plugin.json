@@ -1,0 +1,35 @@
+{
+  "name": "chatfdem",
+  "version": "0.1.0+codex.20260709210154",
+  "description": "FDEM geometry and mesh generation skills using agent-authored Gmsh .geo files, local Gmsh meshing, and browser preview.",
+  "author": {
+    "name": "chatFDEM contributors"
+  },
+  "repository": "local",
+  "license": "MIT",
+  "keywords": [
+    "fdem",
+    "gmsh",
+    "mesh",
+    "simulation",
+    "geo",
+    "inp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "chatFDEM",
+    "shortDescription": "Generate FDEM-ready Gmsh geometry and meshes from natural language.",
+    "longDescription": "chatFDEM packages an agent workflow for authoring Gmsh .geo files from natural-language simulation requests, exporting .msh and Abaqus .inp meshes with boundary node sets, and previewing geometry locally before FDEM handoff. The default workflow uses the agent runtime for language reasoning and does not require a project LLM credential.",
+    "developerName": "chatFDEM contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use the FDEM skill to author a Gmsh .geo file from my geometry request, mesh it with Gmsh, inspect the .msh/.inp artifacts, generate the preview HTML, start the local viewer, and return the preview URL.",
+      "Create an FDEM-ready .geo/.msh/.inp mesh from a natural-language geometry request, start the local web viewer, and return the preview link."
+    ],
+    "brandColor": "#1F6F5B"
+  }
+}

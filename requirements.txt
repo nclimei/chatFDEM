@@ -1,0 +1,2 @@
+# The MVP uses only the Python standard library.
+# Install the Gmsh executable separately, e.g. apt, conda, or system package manager.

@@ -1,0 +1,20 @@
+{
+  "name": "chatFDEM",
+  "interface": {
+    "displayName": "chatFDEM"
+  },
+  "plugins": [
+    {
+      "name": "chatfdem",
+      "source": {
+        "source": "local",
+        "path": "./plugins/chatfdem"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

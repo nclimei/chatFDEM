@@ -1,0 +1,19 @@
+{
+  "name": "chatfdem",
+  "version": "0.1.0",
+  "description": "FDEM geometry and mesh generation skills using agent-authored Gmsh .geo files, local Gmsh meshing, and browser preview.",
+  "author": {
+    "name": "chatFDEM contributors"
+  },
+  "repository": "local",
+  "license": "MIT",
+  "keywords": [
+    "fdem",
+    "gmsh",
+    "mesh",
+    "simulation",
+    "geo",
+    "inp"
+  ],
+  "skills": "./skills/"
+}
