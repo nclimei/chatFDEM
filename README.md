@@ -126,7 +126,7 @@ This repository includes local agent plugin manifests:
 
 ```bash
 # Codex-style local marketplace
-codex plugin marketplace add ./
+codex plugin marketplace add nclimei/chatFDEM
 codex plugin add chatfdem@chatFDEM
 ```
 
