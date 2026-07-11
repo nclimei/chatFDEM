@@ -97,7 +97,9 @@ python -m chatfdem preview outputs/rect_hole.msh \
 ```
 
 Open `outputs/rect_hole_preview.html` directly, or start the local web viewer
-and return a URL served from the artifact root.
+and return a URL served from the artifact root. Two-dimensional meshes render as
+SVG previews; three-dimensional meshes render with an interactive canvas orbit
+viewer for rotate, zoom, and pan inspection.
 
 ## Local Viewer
 

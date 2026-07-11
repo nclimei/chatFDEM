@@ -67,7 +67,49 @@ class MvpWorkflowTest(unittest.TestCase):
 
             preview_path = write_html_preview(result.msh_path, tmp / "rect_hole_preview.html")
             self.assertTrue(preview_path.is_file())
-            self.assertIn("Physical Groups", preview_path.read_text(encoding="utf-8"))
+            preview_html = preview_path.read_text(encoding="utf-8")
+            self.assertIn("Physical Groups", preview_html)
+            self.assertIn("<svg", preview_html)
+            self.assertNotIn("mesh-preview-canvas", preview_html)
+
+    def test_3d_mesh_preview_uses_interactive_canvas(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp = Path(tmp_dir)
+            geo_path = tmp / "box.geo"
+            geo_path.write_text(
+                """// Units: mm.
+SetFactory("OpenCASCADE");
+Box(1) = {0, 0, 0, 20, 10, 8};
+Physical Volume("rock") = {1};
+Physical Surface("xmin") = {1};
+Physical Surface("xmax") = {2};
+Physical Surface("ymin") = {3};
+Physical Surface("ymax") = {4};
+Physical Surface("zmin") = {5};
+Physical Surface("zmax") = {6};
+Mesh.CharacteristicLengthMin = 8;
+Mesh.CharacteristicLengthMax = 8;
+Mesh.MshFileVersion = 4.1;
+""",
+                encoding="utf-8",
+            )
+            result = mesh_geo(
+                geo_path,
+                dim=3,
+                msh_path=tmp / "box.msh",
+                inp_path=tmp / "box.inp",
+            )
+            mesh_summary = read_msh(result.msh_path).summary()
+            self.assertIn("3", mesh_summary["elements_by_dimension"])
+            self.assertIn("zmax", mesh_summary["boundary_node_sets"])
+
+            preview_path = write_html_preview(result.msh_path, tmp / "box_preview.html")
+            preview_html = preview_path.read_text(encoding="utf-8")
+            self.assertIn("mesh-preview-3d", preview_html)
+            self.assertIn("mesh-preview-canvas", preview_html)
+            self.assertIn("mesh-preview-data", preview_html)
+            self.assertIn('"triangles"', preview_html)
+            self.assertNotIn("<svg", preview_html)
 
     def test_mesh_geo_can_skip_inp_export(self) -> None:
         geo_path = REPO_ROOT / "examples" / "geo" / "rect_hole.geo"

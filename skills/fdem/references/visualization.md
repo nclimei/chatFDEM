@@ -6,6 +6,7 @@ Create a standalone HTML preview from the `.msh` sidecar:
 python -m chatfdem preview model.msh --output model_preview.html
 ```
 
-For the MVP, the preview is a 2D XY projection. Use it to verify the apparent
-geometry, physical group colors, boundary tags, hole/crack placement, and mesh
+The preview renders 2D meshes as an XY SVG and 3D meshes with an interactive
+canvas orbit view. Use it to verify the apparent geometry, physical group
+colors, boundary tags, hole/crack placement, layer/contact surfaces, and mesh
 refinement. Repair `.geo` if the preview disagrees with the brief.
