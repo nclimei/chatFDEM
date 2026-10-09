@@ -43,26 +43,21 @@ the chosen units in a `.geo` comment.
 
 ## Tool Setup
 
-Run chatFDEM commands from the project checkout. The Codex plugin provides the
-agent skill instructions; it does not install or bundle the Python package.
+The plugin bundles the chatFDEM Python runtime. Resolve `<plugin-root>` to the
+installed directory containing `.codex-plugin/`, `skills/`, `scripts/`, and
+`python/`. Resolve `<python>` to an available Python 3.11+ interpreter; check
+`python3` first, then versioned commands such as `python3.13`, `python3.12`, or
+`python3.11`. Run the bundled launcher by absolute path; do not assume that the
+source repository exists or modify the user's Python environment.
 
-Before running mesh or viewer commands, verify the local tools from the project
-folder:
-
-```bash
-cd /home/mei/Documents/chatFDEM
-python -m chatfdem doctor
-```
-
-If the agent needs to run from another working directory, use the project folder
-on `PYTHONPATH`:
+Before running mesh or viewer commands, verify Python and Gmsh:
 
 ```bash
-PYTHONPATH=/home/mei/Documents/chatFDEM python -m chatfdem doctor
+"<python>" "<plugin-root>/scripts/chatfdem.py" doctor
 ```
 
-Use the same project-folder execution style or `PYTHONPATH=/home/mei/Documents/chatFDEM`
-prefix for `mesh`, `inspect`, `preview`, and `serve` commands.
+Use this launcher for `mesh`, `inspect`, `preview`, and `serve`. All model and
+artifact paths may remain relative to the user's current working directory.
 
 ## Required Workflow
 
@@ -83,7 +78,7 @@ prefix for `mesh`, `inspect`, `preview`, and `serve` commands.
    lower-dimensional physical groups:
 
    ```bash
-   python -m chatfdem mesh path/to/model.geo \
+   "<python>" "<plugin-root>/scripts/chatfdem.py" mesh path/to/model.geo \
      --msh path/to/model.msh \
      --inp path/to/model.inp \
      --report path/to/model_report.json
@@ -92,15 +87,15 @@ prefix for `mesh`, `inspect`, `preview`, and `serve` commands.
 6. Inspect both mesh artifacts:
 
    ```bash
-   python -m chatfdem inspect path/to/model.msh --json
-   python -m chatfdem inspect path/to/model.inp --json
+   "<python>" "<plugin-root>/scripts/chatfdem.py" inspect path/to/model.msh --json
+   "<python>" "<plugin-root>/scripts/chatfdem.py" inspect path/to/model.inp --json
    ```
 
 7. Confirm expected `.inp` node sets exist for loading/support boundaries, then
    create a visual verification preview:
 
    ```bash
-   python -m chatfdem preview path/to/model.msh \
+   "<python>" "<plugin-root>/scripts/chatfdem.py" preview path/to/model.msh \
      --output path/to/model_preview.html
    ```
 
@@ -109,7 +104,7 @@ prefix for `mesh`, `inspect`, `preview`, and `serve` commands.
    directory's parent or the repository `runs/` directory:
 
    ```bash
-   python -m chatfdem serve --host 127.0.0.1 --runs-root path/to/runs
+   "<python>" "<plugin-root>/scripts/chatfdem.py" serve --host 127.0.0.1 --runs-root path/to/runs
    ```
 
    The command prints the selected base URL and chooses the next available port

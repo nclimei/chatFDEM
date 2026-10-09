@@ -18,5 +18,8 @@ dependencies = []
 chatfdem = "chatfdem.cli:main"
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["plugins/chatfdem/python"]
 include = ["chatfdem*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["plugins/chatfdem/python"]

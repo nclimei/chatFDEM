@@ -1,6 +1,6 @@
 {
   "name": "chatfdem",
-  "version": "0.1.0+codex.20260709210154",
+  "version": "0.1.0+codex.20261009212613",
   "description": "FDEM geometry and mesh generation skills using agent-authored Gmsh .geo files, local Gmsh meshing, and browser preview.",
   "author": {
     "name": "chatFDEM contributors"

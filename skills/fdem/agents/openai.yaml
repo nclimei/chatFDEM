@@ -1,4 +1,0 @@
-interface:
-  display_name: "FDEM"
-  short_description: "Author and validate FDEM-ready Gmsh .geo and .inp mesh artifacts."
-  default_prompt: "Use $fdem to author a Gmsh .geo file from my geometry request, mesh it with Gmsh, inspect .msh/.inp artifacts, and preview the geometry locally."

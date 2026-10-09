@@ -3,7 +3,7 @@
 Use the local `chatfdem` CLI:
 
 ```bash
-python -m chatfdem mesh model.geo --msh model.msh --inp model.inp --report model_report.json
+"<python>" "<plugin-root>/scripts/chatfdem.py" mesh model.geo --msh model.msh --inp model.inp --report model_report.json
 ```
 
 The CLI first writes an ASCII Gmsh 4.x `.msh` sidecar, then converts that mesh

@@ -3,8 +3,8 @@
 Run both:
 
 ```bash
-python -m chatfdem inspect model.msh --json
-python -m chatfdem inspect model.inp --json
+"<python>" "<plugin-root>/scripts/chatfdem.py" inspect model.msh --json
+"<python>" "<plugin-root>/scripts/chatfdem.py" inspect model.inp --json
 ```
 
 Minimum checks:
