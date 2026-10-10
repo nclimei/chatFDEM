@@ -1,5 +1,8 @@
 # chatFDEM
 
+chatFDEM is an agent workflow for creating FDEM-ready meshes from natural
+language.
+
 > **Development and use notice:** This is unpublished work that is being
 > actively developed and tested. Anyone wishing to use chatFDEM for research,
 > commercial, educational, or any other work must first obtain written
@@ -8,8 +11,6 @@
 >
 > Contact: Mei Li (meili.li@mail.utoronto.ca) & Giovanni Grasselli (giovanni.grasselli@utoronto.ca)
 
-chatFDEM is an agent workflow for creating FDEM-ready meshes from natural
-language.
 
 ## Demo videos
 
@@ -89,8 +90,8 @@ meshes.
 
 ### 4. Install chatFDEM
 
-The marketplace command downloads the repository from GitHub. Cloning the
-repository and running `pip install` are not required.
+The marketplace command downloads the repository from GitHub. To install chatFDEM 
+in Claud, replace 'codex' in the command below to 'claude'.
 
 ```bash
 codex plugin marketplace add nclimei/chatFDEM
@@ -131,16 +132,4 @@ workspace may require a sandbox permission approval. Change Codex's permission
 settings if you regularly need to write to another location.
 
 
-
-## Local checkout installation
-
-For plugin development from an existing checkout, run:
-
-```bash
-python3 install.py
-```
-
-On Windows, use `python install.py` when that is the Python 3.11+ command. The
-installer registers the checkout as the local `chatFDEM` marketplace, installs
-the plugin, selects an available Python 3.11+ interpreter, and checks Gmsh.
 
