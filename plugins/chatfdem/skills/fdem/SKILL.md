@@ -47,8 +47,9 @@ The plugin bundles the chatFDEM Python runtime. Resolve `<plugin-root>` to the
 installed directory containing `.codex-plugin/`, `skills/`, `scripts/`, and
 `python/`. Resolve `<python>` to an available Python 3.11+ interpreter; check
 `python3` first, then versioned commands such as `python3.13`, `python3.12`, or
-`python3.11`. Run the bundled launcher by absolute path; do not assume that the
-source repository exists or modify the user's Python environment.
+`python3.11`, and finally `python` (common on Windows). Run the bundled launcher
+by absolute path; do not assume that the source repository exists or modify the
+user's Python environment.
 
 Before running mesh or viewer commands, verify Python and Gmsh:
 

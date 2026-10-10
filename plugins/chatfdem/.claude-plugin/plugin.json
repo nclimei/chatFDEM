@@ -5,7 +5,7 @@
   "author": {
     "name": "chatFDEM contributors"
   },
-  "repository": "local",
+  "repository": "https://github.com/nclimei/chatFDEM",
   "license": "MIT",
   "keywords": [
     "fdem",

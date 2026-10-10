@@ -54,7 +54,7 @@ def configured_marketplaces(codex: str) -> dict[str, Path]:
 def find_runtime_python() -> str:
     candidates = [
         sys.executable,
-        *(shutil.which(name) for name in ("python3.13", "python3.12", "python3.11")),
+        *(shutil.which(name) for name in ("python3.13", "python3.12", "python3.11", "python")),
     ]
     seen: set[str] = set()
     for candidate in candidates:
