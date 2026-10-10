@@ -77,16 +77,14 @@ codex plugin marketplace add nclimei/chatFDEM
 codex plugin add chatfdem@chatFDEM
 ```
 
-Verify that `chatfdem@chatFDEM` is shown as `installed, enabled`:
-
-```bash
-codex plugin list
-```
-
 The plugin installs the `$fdem` skill and the chatFDEM Python module together
 inside the current user's Codex plugin cache. Python and Gmsh remain system
 prerequisites.
 
+Update an installed chatFDEM
+```bash
+codex plugin marketplace upgrade chatFDEM
+```
 
 ### 5. Start Codex in the working folder
 
