@@ -121,12 +121,11 @@ codex
 Example request:
 
 ```text
-Use $fdem to create a 2D rectangular rock specimen 100 mm wide and 50 mm high
-with a centered 10 mm diameter hole. Save all generated files under
-./runs/specimen-01.
+Create a 2D rectangular rock specimen 100 mm wide and 50 mm high
+with a centered 10 mm diameter hole.
 ```
 
-The skill generates the `.geo`, `.msh`, `.inp`, inspection report, and HTML
+The skill generates the Irazu ready mesh file `.inp`, inspection report, and HTML
 preview in the requested working folder. A folder outside the active Codex
 workspace may require a sandbox permission approval. Change Codex's permission
 settings if you regularly need to write to another location.
