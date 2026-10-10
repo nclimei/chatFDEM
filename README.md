@@ -1,7 +1,27 @@
 # chatFDEM
 
+> **Development and use notice:** This is unpublished work that is being
+> actively developed and tested. Anyone wishing to use chatFDEM for research,
+> commercial, educational, or any other work must first obtain written
+> permission from both Mei Li and Giovanni Grasselli at the University of
+> Toronto. We welcome collaboration inquiries.
+>
+> Contact: Mei Li (meili.li@mail.utoronto.ca) & Giovanni Grasselli (giovanni.grasselli@utoronto.ca)
+
 chatFDEM is an agent workflow for creating FDEM-ready meshes from natural
 language.
+
+## Demo videos
+
+Watch these short demonstrations for an overview of the chatFDEM workflow:
+
+- [2D demo](https://utoronto-my.sharepoint.com/:v:/g/personal/meili_li_mail_utoronto_ca/IQC2mr7jNcnQTatbgx96e7X-AR_5K2ndvDRBZCuyM-7S4jk?e=jaNI8K)
+- [3D demo](https://utoronto-my.sharepoint.com/:v:/g/personal/meili_li_mail_utoronto_ca/IQAZYKxRjmXwQ6HO4rx6dxNDAS1-7QOA6m7bsPBntOBgW9Y?e=OmYp0y)
+
+Open a link in your browser and use the SharePoint video player. If prompted,
+sign in with an UofT account. After
+watching, follow the Codex or Claude Code installation instructions below to
+try the demonstrated workflow.
 
 ## Install for Codex
 

@@ -15,7 +15,7 @@ Rules:
   with `Physical Surface`;
 - add local mesh-size fields near holes, cracks, notches, and contact/loading
   boundaries.
-- use Delaunay as the default mesh algorithm
+- use standard Delaunay as the default mesh algorithm
 
 Generated `.msh` and `.inp` files are derived artifacts. Repair `.geo`, then
 regenerate.
